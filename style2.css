@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #000814;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.earth-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.earth {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, #3dd5f3, #0077b6);
+  border-radius: 50%;
+  border: 4px solid #ffffff33;
+  box-shadow: 0 0 30px #3dd5f3;
+  transition: transform 0.3s ease;
+}
+
+.earth-container:hover .earth {
+  transform: scale(1.05);
+}
+
+.info {
+  margin-top: 20px;
+  max-width: 400px;
+  background: #001d3d;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0077b6;
+  display: none;
+}
+
+/* Toggle visible when checkbox is checked */
+#earthToggle:checked ~ .info {
+  display: block;
+}
+
+#earthToggle {
+  display: none;
+}

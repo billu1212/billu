@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #000814;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.sun-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.sun {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, #fff176, #f57f17);
+  border-radius: 50%;
+  border: 4px solid #ffffff33;
+  box-shadow: 0 0 40px 15px #ff9800;
+  transition: transform 0.3s ease;
+}
+
+.sun-container:hover .sun {
+  transform: scale(1.05);
+}
+
+.info {
+  margin-top: 20px;
+  max-width: 400px;
+  background: #1a1a1a;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #f57f17;
+  display: none;
+}
+
+#sunToggle:checked ~ .info {
+  display: block;
+}
+
+#sunToggle {
+  display: none;
+}
